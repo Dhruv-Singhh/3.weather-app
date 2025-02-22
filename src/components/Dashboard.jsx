@@ -43,9 +43,10 @@ const Dashboard = () => {
         })
     }
     useEffect(() => {
-        fetchCurrentData();
-        // fetchCitiesData();
-        setInterval(fetchCurrentData, 100000);
+        if (city) {  // Only fetch weather data when city is available
+            fetchCurrentData();
+            setInterval(fetchCurrentData, 100000);
+        }
     },[city])
     
     useEffect(() => {

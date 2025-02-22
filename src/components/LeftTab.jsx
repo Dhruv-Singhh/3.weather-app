@@ -26,7 +26,7 @@ const LeftTab = ({currentData}) => {
         <div style={{padding:"32px 0 8px 32px", display:"flex", alignItems:"center"}}>
             <img src={currentData?.current?.condition?.icon} ></img>
             {currentData?.location?.name}
-            <span style={{textAlign:"right", flex:"1", marginRight:"32px"}}> {timeInt} </span>
+            <span style={{textAlign:"right", flex:"1", marginRight:"32px", marginLeft:"16px"}}> {timeInt} </span>
         </div>
         <div style={{padding:"16px 0 8px 32px", textAlign:"center"}}>
             <h1 style={{fontSize:"4rem"}}>
@@ -37,10 +37,10 @@ const LeftTab = ({currentData}) => {
             </h2>
         </div>
         <div style={{padding:"32px 0 8px 32px", display:"flex", alignItems:"center"}}>
-            <img src={wind} alt="" height={50} width={50} />
-            <span>{currentData?.current?.wind_kph} Kmph</span>
+            <img src={wind} alt="" style={{margin:"16px 0px 16px 32px"}} height={50} width={50} />
+            <span style={{margin:"16px"}}>{currentData?.current?.wind_kph} Kmph</span>
             <div style={{flex:"1"}}></div>
-            <img src={moisture} alt="" height={35} width={35}/>
+            <img src={moisture} style={{margin:"16px 8px 16px 32px"}} alt="" height={35} width={35}/>
             <span style={{textAlign:"right", marginRight:"32px", marginLeft:"16px"}}>{currentData?.current?.humidity} %</span>
         </div>
     </div>
